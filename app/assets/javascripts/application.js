@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery.jpostal
 //= require_tree .
 
 $(document).on("turbolinks:load", function(){
