@@ -40,7 +40,6 @@ class Public::OrdersController < ApplicationController
     Payjp::Charge.create( # PAY.JPに購入価格と顧客id、通過の種類を渡す
       amount: @order.grand_total,
       card: params[:order][:token],
-      #customer: current_customer.id,
       currency: 'jpy'
     )
 

@@ -30,7 +30,6 @@
 		</div>
 		<div class="field mb2 select_address_1">
 			<label class="fz16"><%= radio_button_tag "order[select_address]", 1 %>登録済住所から選択</label>
-			<%#= select_tag "address_id", options_from_collection_for_select(current_customer.addresses, :id, :finally_address), prompt: "住所を選択してください" %>
 			<%= f.collection_select(:address, Address.where(customer_id: current_customer.id), :id, :finally_address, prompt: "住所を選択してください" ) %>
 		</div>
 		<div class="field mb2 select_address_2">
