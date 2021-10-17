@@ -1,0 +1,14 @@
+1. カード情報を入力して token を取得する
+  * token は <input type="hidden" name="payjp-token"> に挿入される
+
+2. 取得した token をコントローラ ( サーバー ) に送る
+
+3. コントローラで送られてきた token を受け取る
+  * params[:token] みたいな感じで
+
+4. token、金額、通貨 ( jpy ) などの情報を Pay.jp の API に送信する
+  * 支払いの API の使い方は下記のドキュメントを参照
+    * https://pay.jp/docs/charge
+
+5. 正しく API に支払いのリクエストができれば成功のレスポンスがあるはず
+  * 成功したらユーザーに「決済完了しました」みたいなものを表示してあげたり

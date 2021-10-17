@@ -13,12 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require activestorage
-//= require turbolinks
+// require turbolinks
 //= require_tree .
 
 $(document).on("turbolinks:load", function(){
 	// admin/items#new,editでの画像プレビュー
-	function readURL(input) {
+	$(function readURL(input) {
 		if(input.files && input.files[0]){
 			var reader = new FileReader();
 			reader.onload = function (e) {

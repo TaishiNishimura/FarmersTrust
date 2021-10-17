@@ -53,6 +53,7 @@
 			<%= f.label :payment_method, "支払い方法" %>
 			<p><%= @order.payment_method_i18n %></p>
 			<%= f.hidden_field :payment_method, value: @order.payment_method %>
+			<%= f.hidden_field :token, value: @token %>
 		</div>
 		<div class="field">
 			<label>お届け先</label>

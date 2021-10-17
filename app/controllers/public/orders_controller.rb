@@ -8,17 +8,19 @@ class Public::OrdersController < ApplicationController
 
   def confirm
     @order = Order.new(order_params)
-    if params[:select_address] == '0'
+    @select_address = params[:order][:select_address]
+    if @select_address == '0'
       @order.get_shipping_informations_from(current_customer)
-    elsif params[:select_address] == '1'
+    elsif @select_address == '1'
       @selected_address = current_customer.addresses.find(params[:address_id])
       @order.get_shipping_informations_from(@selected_address)
-    elsif params[:select_address] == '2' && (@order.postal_code =~ /\A\d{7}\z/) && @order.destination? && @order.name?
+    elsif @select_address == '2' && (@order.postal_code =~ /\A\d{7}\z/) && @order.destination? && @order.name?
       # 処理なし
     else
       flash[:error] = '情報を正しく入力して下さい。'
       render :new
     end
+    @token = params[:order][:token]
   end
 
   def error
@@ -34,6 +36,14 @@ class Public::OrdersController < ApplicationController
     else
       render :new
     end
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY'] # PAY.JPに秘密鍵をセット
+    Payjp::Charge.create( # PAY.JPに購入価格と顧客id、通過の種類を渡す
+      amount: @order.grand_total,
+      card: params[:order][:token],
+      #customer: current_customer.id,
+      currency: 'jpy'
+    )
+
   end
 
   def thanks
@@ -51,7 +61,7 @@ class Public::OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:postal_code, :destination, :name, :payment_method)
+    params.require(:order).permit(:postal_code, :destination, :name, :payment_method, :token, :select_address, :address_id)
   end
 
   def ensure_cart_items

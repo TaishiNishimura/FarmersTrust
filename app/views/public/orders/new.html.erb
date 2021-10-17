@@ -10,21 +10,31 @@
 			<h3>支払い方法</h3>
 	  	<%= f.radio_button :payment_method, "credit_card", :checked => true %>
 	  	<%= f.label :payment_method, "クレジットカード" %> <!-- クレジットカード -->
+	  	<script
+        type="text/javascript"
+        src="https://checkout.pay.jp/"
+        class="payjp-button"
+        data-key="<%= ENV['PAYJP_PUBLIC_KEY'] %>"
+        data-submit-text="トークンを作成する"
+        data-token-name="order[token]"
+        data-partial="true">
+      </script>
 	  	<%= f.radio_button :payment_method, "transfer" %>
 	  	<%= f.label :payment_method, "銀行振込" %> <!-- 銀行振込 -->
 		</div>
 		<h3>お届け先</h3>
 		<div class="field mb2 select_address_0">
-			<label class="fz16"><%= radio_button_tag :select_address, 0, :checked => true %>ご自身の住所</label>
+			<label class="fz16"><%= radio_button_tag "order[select_address]", 0, :checked => true %>ご自身の住所</label>
 			<p>〒<%= current_customer.postal_code %> <%= current_customer.address %></p>
 			<p><%= current_customer.full_name %></p>
 		</div>
 		<div class="field mb2 select_address_1">
-			<label class="fz16"><%= radio_button_tag "select_address", 1 %>登録済住所から選択</label>
-			<%= select_tag "address_id", options_from_collection_for_select(current_customer.addresses, :id, :finally_address), prompt: "住所を選択してください" %>
+			<label class="fz16"><%= radio_button_tag "order[select_address]", 1 %>登録済住所から選択</label>
+			<%#= select_tag "address_id", options_from_collection_for_select(current_customer.addresses, :id, :finally_address), prompt: "住所を選択してください" %>
+			<%= f.collection_select(:address, Address.where(customer_id: current_customer.id), :id, :finally_address, prompt: "住所を選択してください" ) %>
 		</div>
 		<div class="field mb2 select_address_2">
-			<label class="fz16"><%= radio_button_tag "select_address", 2 %>新しいお届け先</label>
+			<label class="fz16"><%= radio_button_tag "order[select_address]", 2 %>新しいお届け先</label>
 			<div class="field">
 				<%= f.label :postal_code, "郵便番号(ハイフンなし7桁)" %>
 				<%= f.text_field :postal_code, autocomplete: "postal_code", placeholder: "郵便番号", class: "jpostal_code" %>
