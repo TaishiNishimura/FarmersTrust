@@ -94,6 +94,17 @@
       <%= yield %>
     </main>
 
-    <footer>Copyright © Infratop Inc. All Rights Reserved.</footer>
+    <% if customer_signed_in? %>
+      <div class="footer_menu">
+        <%= link_to 'お問い合わせ', new_contact_path, style: "text-decoration:none" %>
+      </div>
+      <footer>
+        FarmersTrust All Rights Reserved.
+      </footer>
+    <% else %>
+      <footer>
+        FarmersTrust All Rights Reserved.
+      </footer>
+    <% end %>
   </body>
 </html>

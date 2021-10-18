@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     end
     resources :cart_items, only: [:index]
     resources :contacts, only: [:new, :create]
-    get 'contacts/check', to: 'contacts#check', as: 'check'
+    post 'contacts/check', to: 'contacts#check', as: 'check'
     post 'contacts/back', to: 'contacts#back', as: 'back'
     get 'done', to: 'contacts#done', as: 'done'
   end
