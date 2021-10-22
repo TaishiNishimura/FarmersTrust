@@ -23,33 +23,35 @@
  /*header*/
   header {
     width: 100%; /* 横幅 */
-    height: 120px;
+    height: 168px;
     position: relative;
-    background-color: #848282;
   }
   .header-content-1 {
-    position: absolute;
-    left: 0;
-    width: 30%;
-    height: 120px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #7a7c7d;
+  }
+  .main-title {
+    height: 120px;
   }
   .header-content-2 {
     position: absolute;
-    right: 0;
-    width: 60%;
     height: 120px;
+    width: 80%;
+    left: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style: none;
+    border-bottom: 1px solid;
   }
   .nav-list {
     text-align: center;
     padding: 10px 0;
     margin: 0 auto;
+    left: 50%;
+    position: absolute;
   }
   .nav-list-item {
     list-style: none;
@@ -61,21 +63,11 @@
   /*footer*/
   footer {
     width: 100%;
-    height: 120px;
-    text-align: center;
-    line-height: 120px;
-    background-color: #848282;
-    bottom: 0; /*下に固定*/
-  }
-  .footer-text {
-    color: #fff;
-  }
-  .footer_menu {
-    width: 100%;
-    height: 120px;
-    text-align: center;
-    line-height: 120px;
-    background-color: #848282;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7a7c7d;
     bottom: 0; /*下に固定*/
   }
   /*footer*/
