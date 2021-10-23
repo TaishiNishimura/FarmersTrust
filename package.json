@@ -1,5 +1,13 @@
 {
   "name": "FarmersTrust",
+  "license": "UNLICENSED",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "vue": "^2.6.14",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^4.3.1"
+  }
 }

@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= javascript_pack_tag 'hello_vue' %>
+    <%= stylesheet_pack_tag 'hello_vue' %>
     <% if admin_signed_in? %>
       <header>
         <div class="header-content-1">
@@ -74,7 +76,6 @@
           <%= link_to 'FarmersTrust', root_path, style: "text-decoration:none"  %>
         </div>
         <div class="header-content-2">
-          <div class="main-title"></div>
           <ul class="nav-list">
             <li class="nav-list-item">
               <%= link_to 'About', about_path, style: "text-decoration:none"  %>
