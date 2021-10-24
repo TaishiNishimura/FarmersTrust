@@ -5,7 +5,6 @@
 			<%= f.label :image, "画像" %>
 			<div class="image_field">
 				<span class="btn btn-file btn-info"><%= f.attachment_field :image %></span>
-				<%= attachment_image_tag item, :image, format: "jpeg", id: "img_prev", fallback: "no_image.jpg", class: "admin_item_image", size: "200x200" %>
 			</div>
 		</div>
 		<table class="admin_item_info item_form">
