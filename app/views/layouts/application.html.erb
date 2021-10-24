@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    <%= javascript_pack_tag 'hello_vue' %>
-    <%= stylesheet_pack_tag 'hello_vue'  %>
+    <%= javascript_pack_tag 'accordion_vue' %>
+    <%= stylesheet_pack_tag 'accordion_vue' %>
     <% if admin_signed_in? %>
       <header>
         <div class="header-content-1">
@@ -37,12 +37,6 @@
           </ul>
         </div>
       </header>
-          <%#<%= form_tag(admin_search_path, method: :get) do %>
-          <%#  <%= text_field_tag "search[content]", "", :placeholder =>"会員: 姓,名,セイ,メイ / 商品: 商品名" %>
-          <%#  <%= select_tag "search[model]", options_for_select({ "会員" => "customer", "商品" => "item" }) %>
-          <%#  <%= select_tag "search[method]", options_for_select({ "部分一致" => "partial", "前方一致" => "forward", "後方一致" => "backward", "完全一致" => "perfect" }) %>
-          <%#  <%= submit_tag '検索', class: "btn btn-primary" %>
-          <%#<% end %>
     <% elsif customer_signed_in? %>
       <header>
         <div class="header-content-1">
@@ -70,24 +64,7 @@
       </header>
     <% else %>
       <header>
-        <div class="header-content-1">
-          <%= link_to 'FarmersTrust', root_path, style: "text-decoration:none"  %>
-        </div>
-        <div class="header-content-2">
-          <ul class="nav-list">
-            <li class="nav-list-item">
-              <%= link_to 'About', about_path, style: "text-decoration:none"  %>
-            </li>
-            <li class="nav-list-item">
-              <%= link_to '商品一覧', items_path, style: "text-decoration:none"  %>
-            </li>
-            <li class="nav-list-item">
-              <%= link_to '新規登録', new_customer_registration_path, style: "text-decoration:none"  %>
-            </li>
-            <li class="nav-list-item">
-              <%= link_to 'ログイン', new_customer_session_path, style: "text-decoration:none"  %>
-            </li>
-          </ul>
+        <div id="accordion">
         </div>
       </header>
     <% end %>

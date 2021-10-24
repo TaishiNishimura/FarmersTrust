@@ -69,3 +69,21 @@
     bottom: 0; /*下に固定*/
   }
   /*footer*/
+
+
+
+.cls_toggle_expand_collapse {
+    margin  : 4px;
+    padding : 8px;
+    cursor  : pointer;
+    background-color: aquamarine
+}
+
+/*
+ * Slide / accordionメニューの設定
+ */
+.menu_slide_accordion {
+    background-color: antiquewhite;
+    height: 120px;
+    overflow: hidden;
+}

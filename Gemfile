@@ -72,5 +72,4 @@ group :production do
   gem 'mysql2'
 end
 gem 'payjp'
-gem 'webpacker', '~> 5.0'
 gem "jquery-rails"
