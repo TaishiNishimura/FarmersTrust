@@ -24,3 +24,16 @@
   //  	return false;
   //  }
   //});
+  $(window).on('load', function() {
+    $(".header-content-2").hide();
+  });
+
+  $(function() {
+    $("header").mouseover(function() {
+      $(".header-content-2").slideDown();
+    },  function() {
+          $("header").mouseout(function() {
+            $(".header-content-2").slideUp();
+        });
+    });
+  });
