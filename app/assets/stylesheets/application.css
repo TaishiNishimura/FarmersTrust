@@ -20,6 +20,12 @@
   box-sizing: border-box;
  }
 
+ /*画面サイズ*/
+ .wrapper {
+   width: 100vh;
+   height: 100vh;
+ }
+
  /*header*/
   header {
     width: 100%; /* 横幅 */
@@ -71,19 +77,28 @@
   /*footer*/
 
 
+ /*サイドバー*/
+  .sidebar {
+    width: 120px;
+    height: 100%;
+    background-color: red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
 
-.cls_toggle_expand_collapse {
-    margin  : 4px;
-    padding : 8px;
-    cursor  : pointer;
-    background-color: aquamarine
-}
+  .genres_index {
+    position: absolute;
+    margin: 5px;
+  }
 
-/*
- * Slide / accordionメニューの設定
- */
-.menu_slide_accordion {
-    background-color: antiquewhite;
-    height: 120px;
-    overflow: hidden;
-}
+  .btn--genres {
+    margin: 10px 0 10px 0;
+    padding: 0.5rem 0.8rem;
+    background-color: #eb6100;
+    border-radius: 100vh;
+  }
+
+  .genres_index_menu {
+    text-decoration: none;
+  }
