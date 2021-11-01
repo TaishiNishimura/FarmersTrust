@@ -46,10 +46,10 @@
     position: absolute;
     height: 120px;
     width: 100%;
+    top: -120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #8ea362;
   }
   .nav-list {
     text-align: center;

@@ -24,18 +24,14 @@
   //  	return false;
   //  }
   //});
-  
-  
-  // $(window).on('load', function() {
-    // $(".header-content-2").hide();
-  // });
 
-  //$(function() {
-  //  $("header").mouseover(function() {
-  //    $(".header-content-2").slideDown();
-  //  },  function() {
-  //        $("header").mouseout(function() {
-  //          $(".header-content-2").slideUp();
-  //      });
-  //  });
-  //});
+  $(function() {
+    $("header").hover(
+      function() {
+        $(".header-content-2").animate({'top' : '0px'},500);
+      },
+      function() {
+        $(".header-content-2").animate({'top' : '-120px'},500);
+      }
+    );
+  });
