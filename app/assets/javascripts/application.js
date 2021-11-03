@@ -35,3 +35,10 @@
       }
     );
   });
+
+  // slick
+  $(function() {
+    $('.a').slick({
+        dots: true,
+    });
+  });

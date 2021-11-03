@@ -7,6 +7,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <!--slick-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   </head>
 
   <body>
@@ -89,6 +95,13 @@
         </div>
       </header>
     <% end %>
+
+    <!--slick-->
+		<div class="a">
+      <div class="b"><img class="c" src="assets/1.jpg"></div>
+      <div class="b"><img class="c" src="assets/2.png"></div>
+      <div class="b"><img class="c" src="assets/3.jpg"></div>
+    </div>
 
     <main>
       <%= yield %>
