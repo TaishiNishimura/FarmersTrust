@@ -25,20 +25,20 @@
   //  }
   //});
 
-  $(function() {
-    $("header").hover(
-      function() {
-        $(".header-content-2").animate({'top' : '0px'},500);
-      },
-      function() {
-        $(".header-content-2").animate({'top' : '-120px'},500);
-      }
-    );
-  });
+  // $(function() {
+    // $("header").hover(
+      // function() {
+        // $(".header-content-2").animate({'top' : '0px'},500);
+      // },
+      // function() {
+        // $(".header-content-2").animate({'top' : '-120px'},500);
+      // }
+    // );
+  // });
 
   // slick
   $(function() {
-    $('.a').slick({
+    $('.slick').slick({
         dots: true,
     });
   });

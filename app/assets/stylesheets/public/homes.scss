@@ -2,3 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.top {
+  position: relative;
+}
+
+.slick {
+  position: absolute;
+}
+
+.slick_img {
+  width: 100%;
+  height: 500px;
+}
+
+.top-message {
+  position: absolute;
+  top: 200px;
+  font-size: 133px;
+  font-weight: 500;
+  line-height: .7969924812;
+  color: #8ea362;
+  font-family: "Roboto", sans-serif;
+  mix-blend-mode: difference;
+}
