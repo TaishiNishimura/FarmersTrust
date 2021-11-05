@@ -1,19 +1,75 @@
-<section class="wrapper flex">
+  <section class="wrapper flex">
+    <!--slick-->
+	<div class="a">
+      <div class="b"><img class="c" src="assets/1.jpg"></div>
+      <div class="b"><img class="c" src="assets/2.png"></div>
+      <div class="b"><img class="c" src="assets/3.jpg"></div>
+    </div>
 
-	<div class="content">
+	<% if customer_signed_in? %>
+      <header>
+        <div class="header-content-1">
+          <%= link_to 'FarmersTrust', root_path, style: "text-decoration:none"  %>
+        </div>
+        <div class="header-content-2">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <p>ようこそ、<%= current_customer.full_name %>さん!</p>
+            </li>
+            <li class="nav-list-item">
+              <%= link_to 'マイページ', "/customers/#{current_customer.id}", style: "text-decoration:none" %>
+            </li>
+            <li class="nav-list-item">
+              <%= link_to '商品一覧', items_path, style: "text-decoration:none" %>
+            </li>
+            <li class="nav-list-item">
+              <%= link_to 'カート', cart_items_path, style: "text-decoration:none" %>
+            </li>
+            <li class="nav-list-item">
+              <%= link_to 'ログアウト', destroy_customer_session_path, method: :delete, style: "text-decoration:none" %>
+            </li>
+          </ul>
+        </div>
+      </header>
+    <% else %>
+      <header>
+        <div class="header-content-1">
+          <%= link_to 'FarmersTrust', root_path, style: "text-decoration:none"  %>
+        </div>
+        <div class="header-content-2">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <%= link_to 'About', about_path, style: "text-decoration:none"  %>
+            </li>
+            <li class="nav-list-item">
+              <%= link_to '商品一覧', items_path, style: "text-decoration:none"  %>
+            </li>
+            <li class="nav-list-item">
+              <%= link_to '新規登録', new_customer_registration_path, style: "text-decoration:none"  %>
+            </li>
+            <li class="nav-list-item">
+              <%= link_to 'ログイン', new_customer_session_path, style: "text-decoration:none"  %>
+            </li>
+          </ul>
+        </div>
+      </header>
+    <% end %>
 
-		<h2 class="section-ttl">オススメ商品</h2>
-		<div class="items">
-			<% @items.each do |item| %>
-				<%= link_to item_path(item) do %>
-					<%= attachment_image_tag item, :image, format: "jpeg", fallback: "no-image.png", size: "200x200" %>
-					<p><%= item.name %></p>
-					<p>
-						<% tax_in = item.price * 1.10 %>
-            ¥<%= tax_in.round.to_s(:delimited) %>
-          </p>
-				<% end %>
-			<% end %>
-		</div>
-	</div>
-</section>
+    <div class="content">
+      <h2 class="section-ttl">オススメ商品</h2>
+      <div class="items">
+      	<% @items.each do |item| %>
+      	  <%= link_to item_path(item) do %>
+      	  <%= attachment_image_tag item, :image, format: "jpeg", fallback: "no-image.png", size: "200x200" %>
+      	    <p>
+      	      <%= item.name %>
+      	    </p>
+      	    <p>
+      	      <% tax_in = item.price * 1.10 %>
+              ¥<%= tax_in.round.to_s(:delimited) %>
+            </p>
+      	  <% end %>
+      	<% end %>
+      </div>
+    </div>
+  </section>
