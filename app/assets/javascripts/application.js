@@ -39,6 +39,6 @@
   // slick
   $(function() {
     $('.slick').slick({
-        dots: true,
+        dots: false,
     });
   });
