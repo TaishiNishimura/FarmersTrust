@@ -1,39 +1,44 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-</style>
+<style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');</style>
 
-  <section class="wrapper flex">
-  	<section class="top">
-      <!--slick-->
-	  <div class="slick">
-        <div class="slick_child"><img class="slick_img" src="assets/FT_sitetop.jpg"></div>
-        <!--<div class="slick_child"><img class="slick_img" src="assets/2.png"></div>-->
-        <!--<div class="slick_child"><img class="slick_img" src="assets/3.jpg"></div>-->
-      </div>
+    <div class="wrapper flex">
+  	  <main class="top">
 
-      <div class="top-message-box">
-        <div class="top-message">
-        	Be Natural,</br>
-        	Be Natural.
-        </div>
-      </div>
+        <section class="top-1">
+	        <div class="slick">
+            <div class="slick_child"><img class="slick_img" src="assets/FT_sitetop.jpg"></div>
+            <!--<div class="slick_child"><img class="slick_img" src="assets/2.png"></div>-->
+            <!--<div class="slick_child"><img class="slick_img" src="assets/3.jpg"></div>-->
+          </div>
+          <div class="top-message-box">
+            <div class="top-message">
+            	Be Natural,</br>
+            	Be Natural.
+            </div>
+          </div>
+        </section>
 
-      <div class="content">
-        <h2 class="section-ttl">オススメ商品</h2>
-        <div class="items">
-        	<% @items.each do |item| %>
-        	  <%= link_to item_path(item) do %>
-        	  <%= attachment_image_tag item, :image, format: "jpeg", fallback: "no-image.png", size: "200x200" %>
-        	    <p>
-        	      <%= item.name %>
-        	    </p>
-        	    <p>
-        	      <% tax_in = item.price * 1.10 %>
-                ¥<%= tax_in.round.to_s(:delimited) %>
-              </p>
-        	  <% end %>
-        	<% end %>
-        </div>
-      </div>
-    </section>
-  </section>
+        <section class="top-2">
+          <div class="left"></div>
+          <div class="right"></div>
+        </section>
+
+        <section class="top-3">
+          <h2 class="section-ttl">オススメ商品</h2>
+          <div class="items">
+          	<% @items.each do |item| %>
+          	  <%= link_to item_path(item) do %>
+          	  <%= attachment_image_tag item, :image, format: "jpeg", fallback: "no-image.png", size: "200x200" %>
+          	    <p>
+          	      <%= item.name %>
+          	    </p>
+          	    <p>
+          	      <% tax_in = item.price * 1.10 %>
+                  ¥<%= tax_in.round.to_s(:delimited) %>
+                </p>
+          	  <% end %>
+          	<% end %>
+          </div>
+        </section>
+
+      </main>
+    </div>
