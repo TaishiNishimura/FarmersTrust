@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.top_img {
+  width: 100%;
+}
+
 .top-message-box {
   margin: 0 auto;
   max-width: 1000px;
@@ -22,8 +26,32 @@
   mix-blend-mode: difference;
 }
 
+.top-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+}
+
+.ttl-zone {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.items-zone {
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100vh;
+  background-color: pink;
+}
+
 .items {
   width: 30%;
-  top: 60%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   background-color: #999999;
+  border-radius: 10px;
 }
