@@ -18,8 +18,8 @@
             <h2 class="section-ttl">items</h2>
           </div>
           <div class="items-zone">
-            <div class="items">
             	<% @items.each do |item| %>
+            	<div class="items">
             	  <%= link_to item_path(item) do %>
             	  <%= attachment_image_tag item, :image, format: "jpeg", fallback: "no-image.png", size: "200x200" %>
             	    <p><%= item.name %></p>
@@ -28,8 +28,8 @@
                     ¥<%= tax_in.round.to_s(:delimited) %>
                   </p>
             	  <% end %>
+            	</div>
             	<% end %>
-            </div>
           </div>
         </section>
 
