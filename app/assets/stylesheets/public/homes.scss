@@ -43,14 +43,14 @@
   margin-right: 10%;
   height: 100vh;
   background-color: pink;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 1rem;
 }
 
 .items {
-  width: 30%;
+  height: fit-content;
   padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   background-color: #999999;
   border-radius: 10px;
