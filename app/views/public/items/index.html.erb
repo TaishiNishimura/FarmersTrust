@@ -18,8 +18,9 @@
 			<h2 class="section-ttl">商品一覧 (全<%= @all_items_count %>件)</h2>
 		<% end %>
 		<% if @items.first %> <!-- @item.existsと同義、SQL1個分削減(?) -->
-			<div class="items">
-				<% @items.each do |item| %>
+		<div class="items-zone">
+			<% @items.each do |item| %>
+			  <div class="items">
 					<%= link_to item_path(item) do %>
 						<%= attachment_image_tag item, :image, format: "jpeg", fallback: "no-image.png", size: "200x200" %>
 						<h5><%= item.genre.name %></h5>
@@ -33,8 +34,9 @@
 							<% end %>
 						</p>
 					<% end %>
-				<% end %>
-			</div>
+				</div>
+			<% end %>
+		</div>
 		<% else %>
 			<h3>対応する商品はありませんでした。</h3>
 		<% end %>
