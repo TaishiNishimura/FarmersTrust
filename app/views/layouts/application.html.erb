@@ -42,7 +42,11 @@
           <%#  <%= submit_tag '検索', class: "btn btn-primary" %>
           <%#<% end %>
     <% elsif customer_signed_in? %>
-      <header>
+      <% if current_page?(root_path) %>
+        <header class="toppage">
+      <% else %>
+        <header class="header-layout">
+      <% end %>
         <div class="header-content-1">
           <%= link_to 'FarmersTrust', root_path, style: "text-decoration:none"  %>
         </div>
@@ -67,7 +71,11 @@
         </div>
       </header>
     <% else %>
-      <header>
+      <% if current_page?(root_path) %>
+        <header class="toppage">
+      <% else %>
+        <header class="header-layout">
+      <% end %>
         <div class="header-content-1">
           <%= link_to 'FarmersTrust', root_path, style: "text-decoration:none", class:"txt" %>
         </div>

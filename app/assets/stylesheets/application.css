@@ -33,7 +33,14 @@
  }
 
  /*header*/
-  header {
+  .header-layout {
+    top: 0;
+    width: 100%; /* 横幅 */
+    height: 120px;
+    z-index: 9999;
+    background-color: #444444;
+  }
+  .toppage {
     top: 0;
     width: 100%; /* 横幅 */
     height: 120px;
