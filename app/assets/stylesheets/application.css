@@ -29,8 +29,7 @@
  }
 
  .content {
-   position: absolute;
-   left: 120px;
+   margin-left: 120px;
  }
 
  p,
@@ -101,10 +100,11 @@
  /*サイドバー*/
   .sidebar {
     width: 120px;
-    height: 100vh;
+    height: 100%;
     background-color: red;
     display: flex;
     justify-content: center;
+    position: absolute;
   }
 
   .genres_index {
