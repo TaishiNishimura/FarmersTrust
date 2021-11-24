@@ -13,9 +13,9 @@
 
 	<div class="content">
 		<% if params[:genre_id] %>
-			<h2 class="section-ttl"><%= @genre.name %>の商品一覧 (全<%= @all_items_count %>件)</h2>
+		  <h2 class="section-ttl"><%= @genre.name %>の商品一覧 (全<%= @all_items_count %>件)</h2>
 		<% else %>
-			<h2 class="section-ttl">商品一覧 (全<%= @all_items_count %>件)</h2>
+		  <h2 class="section-ttl">アイテム一覧 (全<%= @all_items_count %>件)</h2>
 		<% end %>
 		<% if @items.first %> <!-- @item.existsと同義、SQL1個分削減(?) -->
 		<div class="items-zone">
