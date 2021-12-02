@@ -103,11 +103,11 @@
     </main>
 
     <% if customer_signed_in? %>
-      <div class="footer_menu">
-        <%= link_to 'お問い合わせ', new_contact_path, style: "text-decoration:none", class:"txt" %>
-      </div>
       <footer>
-        FarmersTrust All Rights Reserved.
+        <p>FarmersTrust All Rights Reserved.</p>
+        <div class="footer_menu">
+          <%= link_to 'お問い合わせ', new_contact_path, style: "text-decoration:none", class:"txt" %>
+        </div>
       </footer>
     <% else %>
       <footer>
