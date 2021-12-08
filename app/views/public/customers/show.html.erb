@@ -3,11 +3,11 @@
     <p class="text-active"><%= flash[:notice] %></p>
   <% end %>
 	<h2 class="section-ttl">マイページ</h2>
-	<h3>
+	<p class="ml2">
 		登録情報
-		<%= link_to "編集する", edit_customer_path, class: "btn btn-success ml2" %>
-		<%= link_to "パスワードを変更する", edit_customer_registration_path, class: "btn btn-success ml2" %>
-	</h3>
+		<%= link_to "編集する", edit_customer_path, class: "btn btn-success" %>
+		<%= link_to "パスワードを変更する", edit_customer_registration_path, class: "btn btn-success" %>
+	</p>
 	<table class="customer_info mb3">
 		<thead>
 			<th></th>
