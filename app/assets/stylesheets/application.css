@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
  }
 
  /*画面サイズ*/
@@ -83,6 +84,49 @@
     margin: 0 20px;
   }
   /*header*/
+
+
+  /*main*/
+  .background_block01 {
+    background-color: #999;
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    z-index: -99;
+    animation: move-y 20s infinite alternate ease-in-out;
+  }
+  @keyframes move-y {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  .background_block02 {
+    background-color: #999;
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    top: 30%;
+    left: 50%;
+    z-index: -99;
+    animation: move-y 15s infinite alternate ease-in-out;
+  }
+  .background_block03 {
+    background-color: #966;
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    top: 80%;
+    left: 80%;
+    z-index: -99;
+    animation: move-y 15s infinite alternate ease-in-out;
+  }
+
+
+
 
   /*footer*/
   footer {
