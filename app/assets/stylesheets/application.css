@@ -145,14 +145,15 @@
     width: 50%;
     height: 100%;
     z-index: -100;
-    left: -30%;
-    animation: move-x 20s infinite alternate ease-in-out;
+    left: -50%;
+    animation: move-x 10s infinite alternate ease-in-out;
   }
   .background_block_side_02 {
     background-color: #999;
     position: absolute;
     width: 50%;
     height: 100%;
+    left: -20%;
     z-index: -100;
     animation: move-x 15s infinite alternate ease-in-out;
   }
@@ -165,7 +166,15 @@
     z-index: -100;
     animation: move-x 25s infinite alternate ease-in-out;
   }
-
+  .background_block_side_04 {
+    background-color: #993;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    z-index: -100;
+    animation: move-x 30s infinite alternate ease-in-out;
+  }
   @keyframes move-x {
     from {
       transform: translateX(0);
