@@ -38,9 +38,13 @@
    margin-left: 120px;
  }
 
+ a {
+   text-decoration: none;
+ }
+
  p,
  .txt {
-   color: #fff;
+   color: #ced1d3;
  }
 
  /*header*/
