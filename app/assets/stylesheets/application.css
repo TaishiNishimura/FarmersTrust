@@ -108,7 +108,7 @@
     position: absolute;
     width: 40%;
     height: 50%;
-    top: 30%;
+    top: 50%;
     left: 50%;
     z-index: -99;
     opacity: 0.4;
@@ -130,7 +130,7 @@
     position: absolute;
     width: 50%;
     height: 40%;
-    top: -30%;
+    top: 20%;
     left: 20%;
     z-index: -99;
     opacity: 0.4;
@@ -148,40 +148,41 @@
   .background_block_side_01 {
     background-color: #ced1d3;
     position: absolute;
-    width: 50%;
+    width: 60%;
     height: 100%;
     z-index: -100;
     left: -50%;
+    opacity: 0.8;
     animation: move-x 10s infinite alternate ease-in-out;
   }
   .background_block_side_02 {
     background-color: #ced1d3;
     position: absolute;
-    width: 50%;
+    width: 60%;
     height: 100%;
     left: -20%;
     z-index: -100;
-    opacity: 0.8;
+    opacity: 0.6;
     animation: move-x 15s infinite alternate ease-in-out;
   }
   .background_block_side_03 {
     background-color: #ced1d3;
     position: absolute;
-    width: 50%;
+    width: 60%;
     height: 100%;
     left: 30%;
     z-index: -100;
-    opacity: 0.6;
+    opacity: 0.4;
     animation: move-x 25s infinite alternate ease-in-out;
   }
   .background_block_side_04 {
     background-color: #ced1d3;
     position: absolute;
-    width: 50%;
+    width: 60%;
     height: 100%;
     left: 50%;
     z-index: -100;
-    opacity: 0.4;
+    opacity: 0.2;
     animation: move-x 30s infinite alternate ease-in-out;
   }
   @keyframes move-x {
