@@ -16,8 +16,9 @@
 		<% if params[:genre_id] %>
 		  <h2 class="section-ttl"><%= @genre.name %>の商品一覧 (全<%= @all_items_count %>件)</h2>
 		<% else %>
-		  <h2 class="section-ttl">アイテム一覧 (全<%= @all_items_count %>件)</h2>
+		  <h2 class="section-ttl">PRODUCT LINEUP (全<%= @all_items_count %>件)</h2>
 		<% end %>
+		<div class="line"></div>
 		<% if @items.first %> <!-- @item.existsと同義、SQL1個分削減(?) -->
 		<div class="items-zone">
 			<% @items.each do |item| %>
