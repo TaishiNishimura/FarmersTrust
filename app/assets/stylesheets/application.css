@@ -49,7 +49,7 @@
     width: 100%; /* 横幅 */
     height: 120px;
     z-index: 9999;
-    background-color: #a99e93;
+    background-color: #7b8174;
   }
   .toppage {
     top: 0;
@@ -98,6 +98,7 @@
     width: 20%;
     height: 60%;
     z-index: -99;
+    opacity: 0.4;
     animation: move-y 20s infinite alternate ease-in-out;
   }
   .background_block02 {
@@ -108,6 +109,7 @@
     top: 30%;
     left: 50%;
     z-index: -99;
+    opacity: 0.4;
     animation: move-y 15s infinite alternate ease-in-out;
   }
   .background_block03 {
@@ -118,6 +120,7 @@
     top: 80%;
     left: 80%;
     z-index: -99;
+    opacity: 0.4;
     animation: move-y 25s infinite alternate ease-in-out;
   }
   .background_block04 {
@@ -128,6 +131,7 @@
     top: -40%;
     left: 20%;
     z-index: -99;
+    opacity: 0.4;
     animation: move-y 18s infinite alternate ease-in-out;
   }
   @keyframes move-y {
@@ -149,30 +153,33 @@
     animation: move-x 10s infinite alternate ease-in-out;
   }
   .background_block_side_02 {
-    background-color: #c9c9c4;
+    background-color: #ced1d3;
     position: absolute;
     width: 50%;
     height: 100%;
     left: -20%;
     z-index: -100;
+    opacity: 0.8;
     animation: move-x 15s infinite alternate ease-in-out;
   }
   .background_block_side_03 {
-    background-color: #7a7c7d;
+    background-color: #ced1d3;
     position: absolute;
     width: 50%;
     height: 100%;
     left: 30%;
     z-index: -100;
+    opacity: 0.6;
     animation: move-x 25s infinite alternate ease-in-out;
   }
   .background_block_side_04 {
-    background-color: #949495;
+    background-color: #ced1d3;
     position: absolute;
     width: 50%;
     height: 100%;
     left: 50%;
     z-index: -100;
+    opacity: 0.4;
     animation: move-x 30s infinite alternate ease-in-out;
   }
   @keyframes move-x {
@@ -214,7 +221,7 @@
   .btn--genres {
     margin: 10px 0 10px 0;
     padding: 0.5rem 0.8rem;
-    background-color: #666;
+    background-color: #7b8174;
     border-radius: 100vh;
   }
 
