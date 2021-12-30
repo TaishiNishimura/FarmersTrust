@@ -47,6 +47,27 @@
    color: #ced1d3;
  }
 
+ .mb3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ml1 {
+    text-align: center;
+  }
+  .ml2 {
+    text-align: right;
+  }
+  .ml3 {
+    text-align: left;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
  /*header*/
   .header-layout {
     top: 0;

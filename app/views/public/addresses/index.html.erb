@@ -1,7 +1,12 @@
 <section class="inner">
-	<h2 class="section-ttl">配送先登録 / 一覧</h2>
-  <%= render 'form', address: @address, submit: '登録' %>
-	<table class="addresses mt2 has_border">
+	<h2 class="section-ttl">配送先登録</h2>
+
+  <div class="center">
+  	<%= render 'form', address: @address, submit: '登録' %>
+  </div>
+
+	<h2 class="section-ttl">登録済み配送先一覧</h2>
+	<table class="addresses mt2 has_border mb3">
 		<thead>
 			<tr>
 				<th>郵便番号</th>
@@ -24,4 +29,5 @@
 			<% end %>
 		</tbody>
 	</table>
+
 </section>

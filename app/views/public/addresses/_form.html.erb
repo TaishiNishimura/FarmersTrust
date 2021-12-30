@@ -1,4 +1,4 @@
-<%= form_for(address, html: { class: "address_form" }) do |f| %>
+<%= form_for(address, html: { class: "address_form ml2" }) do |f| %>
 	<%= render 'layouts/error_messages', resource: address %>
 	<div class="field">
 		<%= f.label :postal_code, "郵便番号(ハイフンなし7桁)" %>
@@ -11,6 +11,7 @@
 	<div class="field">
 		<%= f.label :name, "宛名" %>
 		<%= f.text_field :name, autocomplete: "name", placeholder: "宛名" %>
+		</br>
 		<%= f.submit submit, class: "btn btn-primary" %>
 	</div>
 <% end %>

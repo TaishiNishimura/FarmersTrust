@@ -1,9 +1,11 @@
 <section class="inner">
 	<h2 class="section-ttl">ショッピングカート</h2>
 	<% if @cart_items.first %>
-		<div class="text-right mb2">
+
+		<div class="text-right ml1">
 			<%= link_to "カートを空にする", destroy_all_path, method: :delete, "data-confirm" => "カートを空にします。よろしいでしょうか？", class: "btn btn-danger" %>
 		</div>
+
 		<table class="cart_items has_border mb3">
 			<thead>
 				<tr>
@@ -45,12 +47,14 @@
 				</tr>
 			</tbody>
 		</table>
-		<div class="text-center">
+
+		<div class="text-center ml1">
 			<%= link_to "注文情報入力に進む", new_order_path, class: "btn btn-success" %>
 		</div>
+
 	<% else %>
-		<h3 class="text-center ml2 fz24">カート内に商品がありません。</h3>
-		<div class="text-center ml2">
+		<h3 class="text-center ml1 fz24">カート内に商品がありません。</h3>
+		<div class="text-center ml1">
 			<%= link_to "商品一覧を見る", items_path, class: "btn btn-primary" %>
 		</div>
 	<% end %>

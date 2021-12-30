@@ -47,7 +47,13 @@
   grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: 1rem;
 }
-
+.item-zone {
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .items {
   height: fit-content;
   padding: 30px;
