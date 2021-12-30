@@ -1,10 +1,16 @@
 <section class="wrapper flex">
+
+	<!-- サイドバー -->
 	<div class="sidebar">
-		<h3>ジャンル一覧</h3>
-		<% @genres.each do |genre| %>
-		<%= link_to genre.name, items_path(genre_id: genre.id) %>
-		<% end %>
+    <div class="genres_index">
+      <% @genres.each do |genre| %>
+        <div class="btn btn--genres">
+          <%= link_to genre.name, items_path(genre_id: genre.id), class:"genres_index_menu" %>
+        </div>
+      <% end %>
+    </div>
 	</div>
+
 	<div class="content">
 		<h2 class="section-ttl"><%= @item.name %></h2>
 		<%= render 'layouts/error_messages', resource: @cart_item %>

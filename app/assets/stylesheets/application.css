@@ -65,10 +65,11 @@
   .header-content-1 {
     position: absolute;
     width: 120px;
-    height: 120px;
+    height: 125px;
     display: flex;
     align-items: center;
     z-index: 1;
+    left: 10px;
   }
   .header-content-2 {
     position: absolute;
