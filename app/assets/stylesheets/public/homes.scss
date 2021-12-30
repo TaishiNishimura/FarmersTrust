@@ -16,14 +16,15 @@
 }
 
 .top-message {
-  position: absolute;
-  top: 200px;
+  position: fixed;
+  top: 30%;
+  left: 60%;
   font-size: 133px;
   font-weight: 500;
   line-height: .7969924812;
   color: #8ea362;
   font-family: "Roboto", sans-serif;
-  mix-blend-mode: difference;
+  mix-blend-mode: color-burn;
 }
 
 .top-2 {

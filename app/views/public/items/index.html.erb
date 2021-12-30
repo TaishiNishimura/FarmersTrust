@@ -25,16 +25,16 @@
 			  <div class="items">
 					<%= link_to item_path(item) do %>
 						<%= attachment_image_tag item, :image, format: "jpeg", fallback: "no-image.png", size: "200x200" %>
-						<h5><%= item.genre.name %></h5>
 						<p><%= item.name %></p>
 						<p>
-							<%= item.with_tax_price.to_s(:delimited) %>円
-							<% if item.is_active? %>
-								<span class="text-active">販売中</span>
-							<% else %>
-								<span class="text-invalid">販売停止中</span>
-							<% end %>
+						<%= item.with_tax_price.to_s(:delimited) %>円
+						<% if item.is_active? %>
+							<span class="text-active">販売中</span>
+						<% else %>
+							<span class="text-invalid">販売停止中</span>
+						<% end %>
 						</p>
+						<p>#<%= item.genre.name %></p>
 					<% end %>
 				</div>
 			<% end %>
