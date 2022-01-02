@@ -42,9 +42,13 @@
    text-decoration: none;
  }
 
- p,
+ p {
+   color: #949495;
+ }
+
+ p2,
  .txt {
-   color: #ced1d3;
+  color: #ced1d3;
  }
 
  .mb3 {

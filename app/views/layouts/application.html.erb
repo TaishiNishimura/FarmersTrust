@@ -53,7 +53,7 @@
         <div class="header-content-2">
           <ul class="nav-list">
             <li class="nav-list-item">
-              <p>ようこそ、<%= current_customer.full_name %>さん!</p>
+              <p2>ようこそ、<%= current_customer.full_name %>さん!</p2>
             </li>
             <li class="nav-list-item">
               <%= link_to 'マイページ', "/customers/#{current_customer.id}", style: "text-decoration:none", class:"txt" %>
@@ -104,14 +104,14 @@
 
     <% if customer_signed_in? %>
       <footer>
-        <p>FarmersTrust All Rights Reserved.</p>
+        <p2>FarmersTrust All Rights Reserved.</p2>
         <div class="footer_menu">
           <%= link_to 'お問い合わせ', new_contact_path, style: "text-decoration:none", class:"txt" %>
         </div>
       </footer>
     <% else %>
       <footer>
-        <p>FarmersTrust All Rights Reserved.</p>
+        <p2>FarmersTrust All Rights Reserved.</p2>
       </footer>
     <% end %>
   </body>
