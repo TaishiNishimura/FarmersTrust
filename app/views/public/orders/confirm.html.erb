@@ -49,6 +49,7 @@
 		</table>
 	</div>
 	<%= form_for(@order, url: orders_path) do |f| %>
+	<div class="ml1">
 		<div class="field">
 			<%= f.label :payment_method, "支払い方法" %>
 			<p><%= @order.payment_method_i18n %></p>
@@ -65,5 +66,6 @@
 		<div class="actions text-center">
 			<%= f.submit "注文を確定する", class: "btn btn-primary submit_to_create_order" %>
 		</div>
+	</div>
 	<% end %>
 </section>
