@@ -22,15 +22,15 @@
 					<h4><%= @item.introduction %></h4>
 					<p>ジャンル: <%= link_to @item.genre.name, items_path(genre_id: @item.genre_id) %></p>
 					<p>
-    	      <% tax_in = @item.price * 1.10 %>
-    	      ¥ <%= tax_in.round.to_s(:delimited) %>
+    	      			<% tax_in = @item.price * 1.10 %>
+    	      			¥ <%= tax_in.round.to_s(:delimited) %>
 						<% if @item.is_active? %>
 						<span class="text-active">販売中</span>
 						<% else %>
 						<span class="text-invalid">販売停止中</span>
 						<% end %>
 					</p><br>
-    	    <% if customer_signed_in? %>
+    	    		<% if customer_signed_in? %>
 						<% cart_item = current_customer.has_in_cart(@item) %>
 						<% if cart_item %>
 							<%= form_for [@item, cart_item] do |f| %>
