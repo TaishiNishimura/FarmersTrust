@@ -15,8 +15,9 @@
 	<div class="content">
 		<h2 class="section-ttl"><%= @item.name %></h2>
 		<%= render 'layouts/error_messages', resource: @cart_item %>
+
 		<div class="item-zone">
-			<div class="flex">
+			<div class="ml1">
 				<%= attachment_image_tag @item, :image, format: "jpeg", class: "item_image", size: "400x400" %>
 				<div class="item_info">
 					<h4><%= @item.introduction %></h4>
@@ -52,6 +53,7 @@
 					<% end %>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </section>
