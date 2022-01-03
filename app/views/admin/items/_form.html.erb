@@ -1,7 +1,7 @@
 <%= form_for(item, url: url) do |f| %>
 	<%= render 'layouts/error_messages', resource: item %>
 	<div class="flex">
-		<div>
+		<div class="ml1">
 			<%= f.label :image, "画像" %>
 			<div class="image_field">
 				<span class="btn btn-file btn-info"><%= f.attachment_field :image %></span>
@@ -42,7 +42,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<div class="flex align-center pl5">
+		<div class="flex align-center ml1">
 			<%= f.submit submit, class: "btn btn-primary" %>
 		</div>
 	</div>
