@@ -17,7 +17,7 @@
 		<%= render 'layouts/error_messages', resource: @cart_item %>
 		<div class="item-zone">
 			<div class="flex">
-				<%= attachment_image_tag @item, :image, format: "jpeg", fallback: "no_image.jpg", class: "item_image", size: "400x400" %>
+				<%= attachment_image_tag @item, :image, format: "jpeg", class: "item_image", size: "400x400" %>
 				<div class="item_info">
 					<h4><%= @item.introduction %></h4>
 					<p>ジャンル: <%= link_to @item.genre.name, items_path(genre_id: @item.genre_id) %></p>
