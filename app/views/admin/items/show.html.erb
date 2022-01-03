@@ -3,7 +3,7 @@
 	  <h2 class="section-ttl">商品詳細</h2>
 	  <div class="flex">
 	  	<div>
-	  		<div class="image_field">
+	  		<div class="image_field ml1">
 	  			<%= attachment_image_tag @item, :image, format: "jpeg", id: "img_prev", fallback: "no_image.jpg", class: "admin_item_image", size: "200x200" %>
 	  		</div>
 	  	</div>
@@ -43,7 +43,7 @@
 	  			</tr>
 	  		</tbody>
 	  	</table>
-	  	<div class="flex align-center pl5">
+	  	<div class="flex align-center ml1">
 	  		<%= link_to "編集する", edit_admin_item_path(@item), class: "btn btn-success" %>
 	  	</div>
 	  </div>
