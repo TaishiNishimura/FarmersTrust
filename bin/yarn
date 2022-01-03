@@ -9,3 +9,4 @@ Dir.chdir(APP_ROOT) do
     exit 1
   end
 end
+
