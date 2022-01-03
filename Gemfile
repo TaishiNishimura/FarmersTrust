@@ -64,6 +64,7 @@ gem 'devise'
 gem 'jp_prefecture' # 都道府県コードから都道府県名を変換するgem
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
+gem 'kaminari', '~> 1.2.1'
 gem 'rails-i18n'
 gem 'enum_help'
 gem 'dotenv-rails'
