@@ -11,9 +11,7 @@ class Item < ApplicationRecord
   scope :where_genre_active, -> { joins(:genre).where(genres: { is_active: true }) }
 
   def with_tax_price
-    (price * 108 / 100.0).ceil
-    # ceilは切り上げ、floorが切り捨て、roundが四捨五入
-    # *1.08だと誤差が生じてしまうためこのような形をとっている
+    (price * 110 / 100.0).ceil
   end
 
   def self.recommended
