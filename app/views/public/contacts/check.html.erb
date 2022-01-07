@@ -29,7 +29,7 @@
   <%= f.hidden_field :phone_number %>
   <%= f.hidden_field :subject %>
   <%= f.hidden_field :message %>
-  <div><%= f.submit '送信' %></div>
+  <div><%= f.submit '送信', class: 'center' %></div>
 <% end %>
 <%= form_for @contact, url: back_path do |f| %>
   <%= f.hidden_field :name %>
@@ -37,5 +37,5 @@
   <%= f.hidden_field :phone_number %>
   <%= f.hidden_field :subject %>
   <%= f.hidden_field :message %>
-  <div><%= f.submit '入力画面に戻る' %></div>
+  <div><%= f.submit '入力画面に戻る', class: 'center' %></div>
 <% end %>

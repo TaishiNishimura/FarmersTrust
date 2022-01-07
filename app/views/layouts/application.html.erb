@@ -16,23 +16,23 @@
           <%= link_to image_tag("logo.png", width: '170px', height: '110px'), admin_top_path %>
         </div>
         <div class="header-content-2">
-          <ul class="nav-list">
-            <li class="nav-list-item">
+          <div class="nav-list">
+            <div class="nav-list-item">
               <%= link_to '商品一覧', admin_items_path, class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to '会員一覧', admin_customers_path, class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to '注文履歴一覧', admin_orders_path, class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to 'ジャンル管理', admin_genres_path, class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to 'ログアウト', destroy_admin_session_path, method: :delete, class:"txt" %>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </header>
           <%#<%= form_tag(admin_search_path, method: :get) do %>
@@ -51,23 +51,23 @@
           <%= link_to image_tag("logo.png", width: '170px', height: '110px'), root_path %>
         </div>
         <div class="header-content-2">
-          <ul class="nav-list">
-            <li class="nav-list-item">
+          <div class="nav-list">
+            <div class="nav-list-item">
               <p2>ようこそ、<%= current_customer.full_name %>さん!</p2>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to 'マイページ', "/customers/#{current_customer.id}", style: "text-decoration:none", class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to '商品一覧', items_path, style: "text-decoration:none", class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to 'カート', cart_items_path, style: "text-decoration:none", class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to 'ログアウト', destroy_customer_session_path, method: :delete, style: "text-decoration:none", class:"txt" %>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </header>
     <% else %>
@@ -80,20 +80,20 @@
           <%= link_to image_tag("logo.png", width: '170px', height: '110px'), root_path %>
         </div>
         <div class="header-content-2">
-          <ul class="nav-list">
-            <li class="nav-list-item">
+          <div class="nav-list">
+            <div class="nav-list-item">
               <%= link_to 'About', about_path, style: "text-decoration:none", class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to '商品一覧', items_path, style: "text-decoration:none", class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to '新規登録', new_customer_registration_path, style: "text-decoration:none", class:"txt" %>
-            </li>
-            <li class="nav-list-item">
+            </div>
+            <div class="nav-list-item">
               <%= link_to 'ログイン', new_customer_session_path, style: "text-decoration:none", class:"txt" %>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </header>
     <% end %>

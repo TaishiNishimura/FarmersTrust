@@ -72,6 +72,21 @@
     align-items: center;
   }
 
+  ul li {
+    list-style: none;
+  }
+
+  label {
+    margin-right: 10px;
+    width: 170px;
+    float: left;
+  }
+
+  ul {
+    width: 30%;
+    margin: 0 auto;
+  }
+
  /*header*/
   .header-layout {
     top: 0;
