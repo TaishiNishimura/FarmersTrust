@@ -1,24 +1,26 @@
-# README
+# Farmers Trust
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# サイト概要
+園芸用品などをラインナップするECサイトです。
 
-Things you may want to cover:
+## サイトテーマ
+ていねい、じっくり。
+ボタニカルな製品をご提案します。
 
-* Ruby version
+## テーマを選んだ理由
+自身のハンドメイド品を取り揃えるECサイトを構築したかったため。
 
-* System dependencies
+## 搭載した機能
+- ログイン機能
+- お問い合わせ機能
+- カート機能
+- 決済機能　※テストモードです。
 
-* Configuration
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- IDE：Cloud9
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- GoogleFonts
