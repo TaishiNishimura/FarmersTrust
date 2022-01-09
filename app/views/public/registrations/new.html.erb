@@ -12,13 +12,13 @@
       <tbody>
         <tr>
           <td>名前</td>
-          <td><%= f.label :first_name, "(姓)", class: "customer_name" %> <%= f.text_field :first_name, autofocus: true, :placeholder =>"難波" %></td>
-          <td><%= f.label :last_name, "(名)", class: "customer_name" %> <%= f.text_field :last_name, :placeholder =>"太郎" %></td>
+          <td><%= f.text_field :first_name, autofocus: true, :placeholder =>"姓" %></td>
+          <td><%= f.text_field :last_name, :placeholder =>"名" %></td>
         </tr>
         <tr>
           <td>フリガナ</td>
-          <td><%= f.label :first_name_kana, "(セイ)" %> <%= f.text_field :first_name_kana, :placeholder =>"ナンバ" %></td>
-          <td><%= f.label :last_name_kana, "(メイ)" %> <%= f.text_field :last_name_kana, :placeholder =>"タロウ" %></td>
+          <td><%= f.text_field :first_name_kana, :placeholder =>"セイ" %></td>
+          <td><%= f.text_field :last_name_kana, :placeholder =>"メイ" %></td>
         </tr>
         <tr>
           <td><%= f.label :email, "メールアドレス" %></td>
