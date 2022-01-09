@@ -87,6 +87,11 @@
     margin: 0 auto;
   }
 
+  .login_field {
+    margin: 0 auto;
+    width:250px;
+  }
+
  /*header*/
   .header-layout {
     top: 0;
