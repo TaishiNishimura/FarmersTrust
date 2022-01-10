@@ -79,7 +79,6 @@
   label {
     margin-right: 10px;
     width: 200px;
-    float: left;
   }
 
   ul {
@@ -256,9 +255,6 @@
     display: flex;
     justify-content: center;
     position: absolute;
-  }
-
-  .genres_index {
   }
 
   .btn--genres {

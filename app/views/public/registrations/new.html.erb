@@ -29,12 +29,12 @@
           <td colspan="2"><%= f.text_field :postal_code, :placeholder =>"5420076", class: "jpostal_code" %></td>
         </tr>
         <tr>
-          <td><%= f.label :address, "住所(郵便番号から自動入力)" %></td>
+          <td><%= f.label :address, "住所" %></td>
           <td colspan="2"><%= f.text_field :address, class: "jpostal_address" %></td>
         </tr>
         <tr>
-          <td><%= f.label :telephone_number, "電話番号(ハイフンなし10or11桁)" %></td>
-          <td colspan="2"><%= f.text_field :telephone_number, :placeholder =>"00011112222" %></td>
+          <td><%= f.label :telephone_number, "電話番号" %></td>
+          <td colspan="2"><%= f.text_field :telephone_number, :placeholder =>"ハイフンなし10or11桁" %></td>
         </tr>
         <tr>
           <td><%= f.label :password, "パスワード(#{@minimum_password_length}文字以上)" %></td>
