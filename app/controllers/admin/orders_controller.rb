@@ -5,11 +5,11 @@ class Admin::OrdersController < ApplicationController
   def index
     if params[:customer_id]
       @customer = Customer.find(params[:customer_id])
-      @orders = @customer.orders.page(params[:page]).reverse_order
+      @orders = @customer.orders.page(params[:page]).per(10)
     elsif params[:created_at] == "today"
-      @orders = Order.ordered_today.includes(:customer).page(params[:page]).reverse_order
+      @orders = Order.ordered_today.includes(:customer).page(params[:page]).per(10)
     else
-      @orders = Order.includes(:customer).page(params[:page]).reverse_order
+      @orders = Order.includes(:customer).page(params[:page]).per(10)
     end
   end
 

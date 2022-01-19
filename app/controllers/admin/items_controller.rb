@@ -13,7 +13,7 @@ class Admin::ItemsController < ApplicationController
     else
       all_items = Item.includes(:genre)
     end
-    @items = all_items.page(params[:page])
+    @items = all_items.page(params[:page]).per(10)
     @all_items_count = all_items.count
   end
 

@@ -2,6 +2,8 @@
 	<div class="section_admin">
 	  <h2 class="section-ttl">会員一覧</h2>
 	  <%= render 'index', customers: @customers %>
-	  <%= paginate @customers %>
+	  <div class="center">
+	  	<%= paginate @customers %>
+	  </div>
 	</div>
 </section>
